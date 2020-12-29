@@ -1,0 +1,110 @@
+//Classes in java script
+
+//scene1
+class Person{
+  
+  constructor(){
+    this.name = 'max'
+    
+  }
+  printmyname(){
+    console.log(this.name);
+  }
+}
+const person = new Person();
+person.printmyname();
+
+/// scene 2
+class Human{
+  constructor(){
+    this.gender = 'male'
+  }
+  printgender(){
+    console.log(this.gender);
+  }
+}
+
+//scene 2
+class Person extends Human{
+  
+  constructor(){
+    super();
+    this.name = 'max'
+    
+  }
+  printmyname(){
+    console.log(this.name);
+  }
+}
+const person = new Person();
+person.printmyname();
+person.printgender();
+
+
+//Modern js ES7 
+
+
+
+class Human{
+  
+   gender = 'male'
+  
+  printgender = () => {
+    console.log(this.gender);
+  }
+}
+
+
+class Person extends Human{
+  
+  
+    name = 'max'
+    
+  }
+  printmyname=()=>{
+    console.log(this.name);
+  }
+}
+const person = new Person();
+person.printmyname();
+person.printgender();
+
+//Spread and Rest Operators
+//scene 1
+const number = [1 , 2 , 3];
+const newnumbers = [...number , 4]; //...are spread operator
+
+console.log(newnumbers);
+
+
+//scene 2 
+const person={
+   name: 'max'
+};
+
+
+const newPerson={
+  ...person,
+    age: 30
+};
+
+console.log(newPerson)
+
+//scene 3 
+const filter=(...args)=>{
+  return args. filter(el => el=== 1);
+}
+console.log(filter(1,2,3));
+
+
+//Refreshing array map function 
+
+
+const numbers = [1 , 2 , 3];
+
+const doubleNumberArray = numbers.map((num) => {
+  return num *2;
+});
+
+console.log(numbers);
+console.log(doubleNumberArray);
